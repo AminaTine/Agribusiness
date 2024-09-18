@@ -1,0 +1,201 @@
+/* Pour l'image de couverture */
+body.index {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Empêche le défilement */
+}
+
+body.index::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/fruits-5831946_1280.jpg') no-repeat center center;
+    background-size: cover;
+    animation: zoom 10s infinite; /* Animation de zoom */
+    z-index: -1; /* Place l'image derrière le contenu */
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /*valeur pour plus ou moins de zoom */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Pour la taille du logo */
+header.log img {
+    width: 120px;
+}
+
+/* Disposition du menu pour la navigation */
+header.log {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+nav.menu-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+nav.menu-nav li {
+    color: white;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Page de bienvenue */
+.grand-titre {
+    color: white;
+    font-size: 50px;
+    padding: 60px 50px;
+}
+
+.petit-titre {
+    color: rgb(22, 245, 70);
+    font-size: 35px;
+}
+
+/* Carrousel */
+.glide {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    margin-top: 20px; 
+}
+
+/*.glide__slide img {
+    width: 80%; /* Diminuez la taille des images */
+    /*height: auto;
+    margin: 0 auto; Centre les images */
+
+
+.glide__arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.glide__arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.glide__bullets {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.glide__bullet {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.glide__slide {
+    margin: 0; /* Supprime les marges */
+    padding: 0; /* Supprime les paddings */
+    display: flex;
+    justify-content: center; /* Centre les images horizontalement */
+}
+
+.glide__slide img {
+    width: 70%; /* Réduit la taille des images */
+    height: auto;
+    margin: 0; /* Supprime les marges */
+    padding: 0; /* Supprime les paddings */
+    display: block; /* Supprime les espaces blancs en bas des images */
+}
+
+.menu-nav a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.page-acceuil-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.page-acceuil, .presentation {
+    width: 45%; /* Ajustez la largeur selon vos besoins */
+}
+
+.presentation {
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le texte de présentation */
+    border-radius: 10px;
+}
+
+.presentation h1 {
+    color: rgb(22, 245, 70);
+    font-size: 30px;
+}
+.produits {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.produit {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white; /* Fond blanc pour chaque produit */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre pour la séparation */
+}
+
+.produit img {
+    width: 20%; /* Réduit la taille des images */
+    height: auto;
+    border-radius: 10px;
+}
+
+.description {
+    color: black; /* Texte en noir */
+    font-size: 18px;
+}
+
+.log {
+    background-color: green; /* Fond vert pour la section des produits */
+    padding: 20px;
+}
+
+
+
